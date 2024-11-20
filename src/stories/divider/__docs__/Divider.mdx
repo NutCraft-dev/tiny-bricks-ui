@@ -1,0 +1,112 @@
+import { Meta, Controls, Canvas } from "@storybook/addon-docs";
+
+import * as Divider from "./Divider.stories.tsx";
+
+<Meta of={Divider} title="Divider" />
+
+# Divider
+
+A divider component for separating content with optional text.
+
+## Examples
+
+### Types
+
+Horizontal, vertical and inline divider options.
+
+<Canvas of={Divider.Types} />
+
+### Variants
+
+Different variants for the divider.
+
+<Canvas of={Divider.Variants} />
+
+### Custom Colors
+
+Customize the divider color using the `customColor` prop.
+
+<Canvas of={Divider.CustomColors} />
+
+### Thickness Variants
+
+Different thickness options for the divider.
+
+<Canvas of={Divider.Thickness} />
+
+### Text Positioning
+
+Dividers with text in different positions.
+
+<Canvas of={Divider.WithText} />
+
+### Text margin
+
+Dividers with text and different margin spacing.
+
+<Canvas of={Divider.WithTextMargin} />
+
+## Changing Default Colors
+
+To change the default color of the divider, you can set the `--divider` variable in your css file.
+
+```css
+:root {
+  --divider: #4a90e2;
+}
+```
+
+## Usage
+
+```jsx
+import { Divider } from "tiny-bricks-ui";
+
+const Example = () => {
+  return <Divider type="horizontal">Optional Text</Divider>;
+};
+export default Example;
+```
+
+## Props
+
+### type
+
+- Type: `"horizontal" | "vertical"`
+- Default: `"horizontal"`
+- Description: Sets the type of the divider.
+
+### variant
+
+- Type: `"solid" | "dashed" | "dotted"`
+- Default: `"solid"`
+- Description: Sets the variant of the divider.
+
+### customColor
+
+- Type: string
+- Default: `undefined`
+- Description: Sets a custom color for the divider.
+
+### thickness
+
+- Type: `"thin" | "medium" | "thick"`
+- Default: `"thin"`
+- Description: Controls the thickness of the divider line.
+
+### spacing
+
+- Type: "none" | "small" | "medium" | "large"
+- Default: "medium"
+- Description: Controls the margin spacing around the divider.
+
+### textPosition
+
+- Type: `"none" | "left" | "center" | "right"`
+- Default: `"center"`
+- Description: Sets the position of the optional text within the divider.
+
+### textMargin
+
+- Type: number
+- Default: `undefined`
+- Description: Sets the margin spacing around the optional text.

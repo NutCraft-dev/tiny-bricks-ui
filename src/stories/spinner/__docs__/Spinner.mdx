@@ -1,0 +1,66 @@
+import { Meta, Controls, Canvas } from "@storybook/addon-docs";
+
+import * as Spinner from "./Spinner.stories.tsx";
+
+<Meta of={Spinner} title="Spinner" />
+
+# Spinner
+
+A loading spinner component.
+
+## Examples
+
+### Spinner Variants
+
+Different variants for the spinner.
+
+<Canvas of={Spinner.Variants} />
+
+### Spinner Sizes
+
+Different sizes for the spinner.
+
+<Canvas of={Spinner.Sizes} />
+
+### Spinner Colors
+
+Customizable color options for the spinner.
+
+<Canvas of={Spinner.Colors} />
+
+### Spinner Speeds
+
+Different speeds for the spinner.
+
+<Canvas of={Spinner.Speeds} />
+
+## Usage
+
+```jsx
+import { Spinner } from "tiny-bricks-ui";
+
+const Example = () => {
+  return <Spinner />;
+};
+export default Example;
+```
+
+## Props
+
+### size
+
+- Type: `"small" | "medium" | "large"`
+- Default: `"medium"`
+- Description: Controls the size of the spinner.
+
+### color
+
+- Type: `string`
+- Default: `"gray"`
+- Description: Customizes the color of the spinner. Use any valid CSS color value.
+
+### speed
+
+- Type: `"slow" | "medium" | "fast"`
+- Default: `"medium"`
+- Description: Controls the speed of the spinner.

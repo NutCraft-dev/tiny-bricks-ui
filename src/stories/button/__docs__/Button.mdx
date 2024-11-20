@@ -1,0 +1,168 @@
+import { Canvas, Meta, Controls } from "@storybook/blocks";
+import * as Button from "./Button.stories.tsx";
+
+<Meta of={Button} title="Button" />
+
+# Button Component
+
+A versatile button component that supports various styles, sizes, and interactions.
+
+## Examples
+
+### Button Variants
+
+Different visual styles for the button.
+
+<Canvas of={Button.Variants} />
+
+### Button Sizes
+
+Available size options for the button.
+
+<Canvas of={Button.Sizes} />
+
+### Button Shadows
+
+Shadow effects that can be applied to buttons.
+
+<Canvas of={Button.Shadows} />
+
+### Button Shapes
+
+Different shape variations of the button.
+
+<Canvas of={Button.Shapes} />
+
+### Custom Colors
+
+Customizable color options for the button.
+
+<Canvas of={Button.CustomColors} />
+
+### Button Loading
+
+Loading state for the button.
+
+<Canvas of={Button.Loading} />
+
+### Button Disabled
+
+Disabled state for the button.
+
+<Canvas of={Button.Disabled} />
+
+### Button Icons
+
+Buttons with icons for various actions.
+
+<Canvas of={Button.Icon} />
+
+### Button Animate
+
+Animated button effects.
+
+<Canvas of={Button.Animate} />
+
+## Changing Default Colors
+
+To change the default colors of the buttons, you can set these variables in your css file.
+
+```css
+:root {
+  --button-filled: #4a90e2;
+  --button-soft: #ff6b6b;
+  --button-outline: #50c878;
+  --button-dashed: #9b59b6;
+  --button-ghost: #f39c12;
+  --button-link: #e74c3c;
+}
+```
+
+## Usage
+
+```jsx
+import { Button } from "tiny-bricks-ui";
+
+const Example = () => {
+  return (
+    <Button
+      size="small"
+      variant="filled"
+      className="custom-button-classes"
+      onClick={() => console.log("Clicked")}
+    >
+      Button
+    </Button>
+  );
+};
+
+export default Example;
+```
+
+## Props
+
+### variant
+
+- Type: `"filled" | "outline" | "soft" | "dashed" | "ghost"`
+- Default: `"filled"`
+- Description: Determines the visual style of the button.
+
+### disabled
+
+- Type: `boolean`
+- Default: `false`
+- Description: When set to true, the button becomes non-interactive and displays a disabled state.
+
+### loading
+
+- Type: `boolean`
+- Default: `false`
+- Description: When set to true, the button displays a loading state.
+
+### size
+
+- Type: `"xs" | "sm" | "md" | "lg" | "xl"`
+- Default: `"medium"`
+- Description: Controls the button's dimensions and padding.
+
+### onClick
+
+- Type: `MouseEventHandler<HTMLButtonElement>`
+- Required: Yes
+- Description: Event handler function that executes when the button is clicked. Receives the mouse event as a parameter.
+
+### shadow
+
+- Type: `"none" | "small" | "medium" | "large"`
+- Default: `"none"`
+- Description: Controls the shadow effect applied to the button.
+
+### shape
+
+- Type: `"rounded" | "square" | "pill"`
+- Default: `"rounded"`
+- Description: Determines the shape of the button.
+
+### color
+
+- Type: `string`
+- Default: `""`
+- Description: Customizes the button's color.
+
+### icon
+
+- Type: `ReactNode`
+- Default: `undefined`
+- Description: Icon component to be displayed alongside the button text.
+
+### iconPosition
+
+- Type: `"start" | "end"`
+- Default: `false`
+- Description: Determines whether to display the icon at start or end of the button text.
+
+### animate
+
+- Type: `"ripple" | "wave" | "none"`
+- Default: `"ripple"`
+- Description: Controls the animation effect applied to the button.

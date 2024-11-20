@@ -1,0 +1,59 @@
+import { Canvas, Meta, Controls } from "@storybook/blocks";
+import * as SplitPane from "./SplitPane.stories.tsx";
+
+<Meta of={SplitPane} title="SplitPane" />
+
+# SplitPane Component
+
+A flexible split pane component that allows for resizable panels in both horizontal and vertical orientations.
+
+## Examples
+
+### Layout
+
+Basic split pane layout with nested panels.
+
+<Canvas of={SplitPane.Layout} />
+
+## Usage
+
+```jsx
+import { SplitPane } from "tiny-bricks-ui";
+
+const Example = () => {
+  return (
+    <SplitPane orientation="horizontal">
+      <SplitPane.Panel>
+        <div>Panel 1</div>
+      </SplitPane.Panel>
+      <SplitPane.Panel>
+        <div>Panel 2</div>
+      </SplitPane.Panel>
+    </SplitPane>
+  );
+};
+
+export default Example;
+```
+
+## Props
+
+### orientation
+
+- Type: `"horizontal" | "vertical"`
+- Default: `"horizontal"`
+- Description: Determines the direction of the split pane layout.
+
+### minBlockSize
+
+- Type: `number`
+- Default: `0`
+- Description: Sets the minimum size (in pixels) that a panel can be resized to.
+
+### Panel Component
+
+`SplitPane.Panel` is a sub-component that represents individual panels within the split pane layout.
+
+```jsx
+<SplitPane.Panel>{/* Panel content */}</SplitPane.Panel>
+```

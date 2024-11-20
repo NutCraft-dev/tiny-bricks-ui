@@ -1,0 +1,154 @@
+import { Meta, Controls, Canvas } from "@storybook/blocks";
+
+import * as Skeleton from "./Skeleton.stories.tsx";
+
+<Meta of={Skeleton} title="Skeleton" />
+
+# Skeleton Component
+
+A versatile loading skeleton component that supports various styles, animations, and layouts.
+
+## Examples
+
+### Default Skeleton
+
+Basic skeleton loading state.
+
+<Canvas of={Skeleton.Default} />
+
+### Avatar with Text
+
+Skeleton for avatar with accompanying text lines.
+
+<Canvas of={Skeleton.AvatarWithText} />
+
+### Multiline Text
+
+Multiple lines of skeleton loading state.
+
+<Canvas of={Skeleton.MultilineText} />
+
+### Skeleton Variants
+
+Different visual styles for the skeleton.
+
+<Canvas of={Skeleton.Variants} />
+
+### Theme Variants
+
+Light and dark theme options.
+
+<Canvas of={Skeleton.ThemeVariants} />
+
+### Media Placeholders
+
+Skeleton loading states with media icons.
+
+<Canvas of={Skeleton.MediaPlaceholders} />
+
+### Custom Styles
+
+Customizable styles for the skeleton.
+
+<Canvas of={Skeleton.CustomStyles} />
+
+## Usage
+
+```jsx
+import { Skeleton } from "tiny-bricks-ui";
+
+const Example = () => {
+  return (
+    <Skeleton
+      variant="rectangular"
+      theme="light"
+      animate={true}
+      width={200}
+      height={100}
+      className="custom-skeleton-class"
+    />
+  );
+};
+
+export default Example;
+```
+
+## Props
+
+### variant
+
+- Type: `"line" | "rounded" | "rectangular" | "circle"`
+- Default: `"line"`
+- Description: Determines the visual style of the skeleton.
+
+### disabled
+
+- Type: `boolean`
+- Default: `false`
+- Description: When set to true, the skeleton becomes non-interactive and displays a disabled state.
+
+### animate
+
+- Type: `boolean`
+- Default: `true`
+- Description: Controls the pulse animation effect of the skeleton.
+
+### width
+
+- Type: `string | number`
+- Required: No
+- Description: Sets the width of the skeleton. When passing a number, it's treated as pixels.
+
+### height
+
+- Type: `string | number`
+- Required: No
+- Description: Sets the height of the skeleton. When passing a number, it's treated as pixels.
+
+### theme
+
+- Type: `"light" | "dark"`
+- Default: `"light"`
+- Description: Controls the color theme of the skeleton.
+
+### customColor
+
+- Type: `string`
+- Default: `""`
+- Description: Customizes the skeleton's color. Accepts any valid CSS color value.
+
+### rows
+
+- Type: `number`
+- Default: `1`
+- Description: Specifies the number of skeleton lines to display.
+
+### para
+
+- Type: `boolean`
+- Default: `false`
+- Description: Enables paragraph mode with varying widths for each line.
+
+### avatar
+
+- Type: `boolean`
+- Default: `false`
+- Description: Enables avatar layout mode with accompanying text lines.
+
+### circleSize
+
+- Type: `string | number`
+- Default: `undefined`
+- Description: Sets the size of circle variant or avatar. When passing a number, it's treated as pixels.
+
+### borderRadius
+
+- Type: `string | number`
+- Default: `undefined`
+- Description: Controls the border radius of the skeleton. When passing a number, it's treated as pixels.
+
+### media
+
+- Type: `"none" | "image" | "video"`
+- Default: `"none"`
+- Description: Displays a placeholder icon for media content types within the skeleton.

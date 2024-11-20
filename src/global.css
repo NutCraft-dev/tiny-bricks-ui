@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* button colors */
+  --button-filled: rgb(50, 100, 200);
+  --button-filled-hover: rgba(50, 100, 200, 0.8);
+  --button-outline: rgb(50, 100, 200);
+  --button-outline-hover: rgba(50, 100, 200, 0.1);
+  --button-soft: rgba(50, 100, 200, 0.6);
+  --button-soft-hover: rgba(50, 100, 200, 0.8);
+  --button-dashed: rgb(50, 100, 200);
+  --button-dashed-hover: rgba(50, 100, 200, 0.1);
+  --button-ghost: rgb(50, 100, 200);
+  --button-ghost-hover: rgba(50, 100, 200, 0.1);
+  --button-link: rgb(50, 100, 200);
+  --button-link-hover: rgba(50, 100, 200, 0.8);
+  /* divider */
+  --divider: rgba(0, 0, 0, 0.5);
+  /* spinner */
+  --spinner: rgba(50, 100, 200, 1);
+  /* typography */
+  --heading-h1: rgba(0, 0, 0, 1);
+  --heading-h2: rgba(0, 0, 0, 1);
+  --heading-h3: rgba(0, 0, 0, 1);
+  --heading-h4: rgba(0, 0, 0, 1);
+  --heading-h5: rgba(0, 0, 0, 1);
+  --heading-h6: rgba(0, 0, 0, 1);
+  --subHeading1: rgba(0, 0, 0, 1);
+  --subHeading2: rgba(0, 0, 0, 1);
+  --body: rgba(0, 0, 0, 1);
+}

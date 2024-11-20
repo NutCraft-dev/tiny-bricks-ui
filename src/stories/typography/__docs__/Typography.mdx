@@ -1,0 +1,143 @@
+import { Canvas, Meta, Controls } from "@storybook/blocks";
+import * as Typography from "./Typography.stories.tsx";
+
+<Meta of={Typography} title="Typography" />
+
+# Typography Component
+
+A comprehensive typography system that provides consistent text styling with various options for headings, body text, and decorative elements.
+
+## Examples
+
+### Typography Variants
+
+Different heading levels and text styles including H1-H6, SubHeadings, Text and Code components.
+
+<Canvas of={Typography.Variants} />
+
+### Custom Sizes
+
+Demonstrate different text sizes using the size prop.
+
+<Canvas of={Typography.CustomSizes} />
+
+### Color Variations
+
+Examples of typography components with different colors.
+
+<Canvas of={Typography.ColorVariations} />
+
+### Text Alignment
+
+Text alignment options for different layout needs.
+
+<Canvas of={Typography.Alignment} />
+
+### Text Decorations
+
+Various text decoration options including underline, strong, italic, and strikethrough.
+
+<Canvas of={Typography.Decorations} />
+
+### Combined Styles
+
+Examples of combined typography styles and decorations.
+
+<Canvas of={Typography.Combined} />
+
+### Disabled State
+
+Disabled appearance for typography elements.
+
+<Canvas of={Typography.Disabled} />
+
+### Copy Feature
+
+Typography components with copy functionality.
+
+<Canvas of={Typography.CopyFeature} />
+
+## Usage
+
+```jsx
+import { Typography } from "tiny-bricks-ui";
+
+const Example = () => {
+  return (
+    <>
+      <Typography.H1>Main Heading</Typography.H1>
+      <Typography.Text align="center" strong>
+        Important centered text
+      </Typography.Text>
+      <Typography.SubHeading1>Section Subheading</Typography.SubHeading1>
+      <Typography.Code copy>const code = "Copyable code";</Typography.Code>
+    </>
+  );
+};
+
+export default Example;
+```
+
+## Props
+
+### Common Props (All Components)
+
+### color
+
+- Type: `string`
+- Default: inherit
+- Description: Sets the text color using hex, rgb, or named colors.
+
+- size
+- Type: number
+  Description: Custom size multiplier for the text.
+
+### align
+
+- Type: `"left" | "center" | "right" | "justify"`
+- Default: `"left"`
+- Description: Controls the text alignment within its container.
+
+### disabled
+
+- Type: `boolean`
+- Default: `false`
+- Description: When set to true, the text becomes visually muted.
+
+### decorative props
+
+- underline: Adds underline decoration
+- strong: Makes text bold
+- italic: Applies italic styling
+- strikethrough: Adds line-through decoration
+- All are `boolean` type, default `false`
+
+### Heading Component
+
+### element
+
+- Type: `"h1" | "h2" | "h3" | "h4" | "h5" | "h6"`
+- Default: `"h6"`
+- Description: HTML element to render the heading as.
+
+### Text Component
+
+### element
+
+- Type: `"span" | "p" | "div" | "label"`
+- Default: `"p"`
+- Description: HTML element to render the text as.
+
+### Code Component
+
+### element
+
+- Type: `"code" | "pre"`
+- Default: `"code"`
+- Description: HTML element to render the code block as.
+
+### children
+
+- Type: `ReactNode`
+- Required: Yes
+- Description: The code content to be displayed.
