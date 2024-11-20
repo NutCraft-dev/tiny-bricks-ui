@@ -26,7 +26,15 @@ export default defineConfig({
   plugins: [dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      components: path.resolve(__dirname, "./src/components"),
+      hooks: path.resolve(__dirname, "./src/hooks"),
+      utils: path.resolve(__dirname, "./src/utils"),
+      types: path.resolve(__dirname, "./src/types"),
+      context: path.resolve(__dirname, "./src/context"),
+      icons: path.resolve(__dirname, "./src/icons"),
+      stories: path.resolve(__dirname, "./src/stories"),
+      variants: path.resolve(__dirname, "./src/variants"),
     },
+    extensions: [".js", ".ts", ".tsx"],
   },
 });
