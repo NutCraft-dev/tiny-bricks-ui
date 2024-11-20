@@ -1,6 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import { type VariantProps, tv } from "tailwind-variants";
+import { type VariantProps } from "tailwind-variants";
 import { skeletonVariants } from "variants";
 
 export interface SkeletonProps extends VariantProps<typeof skeletonVariants> {
