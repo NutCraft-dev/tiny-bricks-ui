@@ -41,6 +41,11 @@ export const Layout: Story = {
               Panel 4
             </div>
           </SplitPane.Panel>
+          <SplitPane.Panel>
+            <div className="flex items-center justify-center h-full">
+              Panel 5
+            </div>
+          </SplitPane.Panel>
         </SplitPane>
       </SplitPane>
     </div>
